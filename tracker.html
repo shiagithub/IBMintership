@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Conservation Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div class="container">
+    <h1 align="center">Water Conservation Tracker</h1>
+    <form id="waterForm">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required><br>
+        <label for="usage">Water Usage (liters):</label>
+        <input type="number" id="usage" name="usage" required><br>
+        <button type="submit">Add Usage</button>
+    </form>
+    <h2>Your Water Usage</h2>
+    <ul id="usageList"></ul>
+    <h2>Usage Summary</h2>
+    <p id="usageSummary"></p>
+    <h2>Set Daily Goal</h2>
+    <form id="goalForm">
+        <label for="goal">Daily Goal (liters):</label>
+        <input type="number" id="goal" name="goal" required><br>
+        <button type="submit">Set Goal</button>
+    </form>
+    <p id="goalMessage"></p>
+    <canvas id="usageChart"></canvas>
+    <button id="refreshButton">Refresh graph</button>
+    
+    </div>
+    <div id="popupBar" class="popup-bar">
+        <span class="close-btn">&times;</span>
+        <h2>Water Saving tips</h2>
+        <ul>
+         <li>Fix leaky faucets and toilets.</li>
+         <li>Take shorter showers.</li>
+         <li>Use a broom to clean driveways instead of a hose.</li>
+        </ul>
+    </div>
+    <button id="showPopup">Show Popup</button>
+    <script src="scripts.js"></script>
+</body>
+</html>
